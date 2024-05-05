@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+void inicializarTabuleiro(int tabuleiro[4][8]){
+   
+    int linha, coluna;
+    
+    for(linha=0 ; linha <= 3 ; linha++ ){
+        for(coluna=0 ; coluna <= 7 ; coluna++ ){
+            tabuleiro[linha][coluna]=0;
+    	}
+	}
+}
+
+void posicionar(){
+    
+}
+
+void exibirTabuleiro(int tabuleiro[4][8]){
+
+    int linha, coluna;
+
+    printf("\t1 \t2 \t3 \t4 \t5 \t6 \t7 \t8");
+    printf("\n");
+
+    for(linha=0 ; linha <= 3 ; linha++ ){
+        printf("%d",linha+1);
+        for(coluna=0 ; coluna <= 7 ; coluna++ ){
+            if(tabuleiro[linha][coluna]==0){
+                printf("\t0");
+            }
+        }
+        printf("\n");
+    }
+}
+
+
+
+int main() {
+    
+	int tabuleiro[4][8];
+
+    inicializarTabuleiro(tabuleiro);
+    exibirTabuleiro(tabuleiro);
+
+	return 0; 
+}
